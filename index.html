@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Charity Ojera - Web Developer</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+  <header class="main-header">
+    <!-- Example: Replace name with a code icon and your profession -->
+    <div class="logo">
+      <i class="fas fa-code" style="font-size:2rem; vertical-align:middle; color:#ffd600;"></i>
+      <span class="logo-text" style="font-size:1.1rem; font-weight:700; margin-left:0.4em; letter-spacing:1px;">Web Developer</span>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <button id="theme-toggle" aria-label="Toggle dark mode">🌙</button>
+  </header>
+
+  <section id="home" class="hero-section" data-aos="fade-up">
+    <div class="hero-content">
+      <div class="hero-text">
+        <h1>Hi! I'm <span class="highlight">Charity Ojera</span><br><span class="subtitle">Web Developer</span></h1>
+        <p>Creative developer passionate about building beautiful and efficient web applications. Specialized in UI/UX, branding, and digital solutions.</p>
+        <div class="hero-actions">
+          <a href="assets/Ojera Charity Faith.pdf" class="btn primary" download>Download CV</a>
+          <a href="#contact" class="btn secondary">Get in touch</a>
+        </div>
+        <div class="hero-socials">
+          <a href="#" title="LinkedIn">
+            <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linkedin.svg" alt="LinkedIn">
+          </a>
+          <a href="https://github.com/charityfae" title="GitHub" target="_blank" rel="noopener">
+            <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/github.svg" alt="GitHub">
+          </a>
+          <a href="https://www.instagram.com/faeart99" title="Instagram" target="_blank" rel="noopener">
+            <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/instagram.svg" alt="Instagram">
+          </a>
+        </div>
+      </div>
+      <div class="hero-image">
+        <div class="blob-bg">
+          <!-- SVG blob background -->
+          <svg viewBox="0 0 400 400" width="340" height="340" xmlns="http://www.w3.org/2000/svg">
+            <path fill="#FFD600" d="M320,320Q240,400,160,320Q80,240,160,160Q240,80,320,160Q400,240,320,320Z"/>
+          </svg>
+        </div>
+        <img src="images/link.jpg" alt="Charity Ojera" class="profile-pic-large" />
+      </div>
+    </div>
+  </section>
+
+  <section id="skills" class="skills-section" data-aos="fade-right">
+    <h2> My Design Skills Include</h2>
+    <div class="skills-cards">
+      <div class="skill-card">
+        <div class="icon"><i class="fas fa-pencil-ruler"></i></div>
+        <div>UI/UX Design</div>
+      </div>
+      <div class="skill-card">
+        <div class="icon"><i class="fas fa-laptop-code"></i></div>
+        <div>Web Development</div>
+      </div>
+      <div class="skill-card">
+        <div class="icon"><i class="fas fa-palette"></i></div>
+        <div>Graphic Design</div>
+      </div>
+      <div class="skill-card">
+        <div class="icon"><i class="fas fa-bolt"></i></div>
+        <div>Motion Design</div>
+      </div>
+    </div>
+    <div class="skills-bars">
+      <div class="skill-bar">
+        <span>JavaScript</span>
+        <div class="bar"><div class="fill" style="width: 90%"></div></div>
+      </div>
+      <div class="skill-bar">
+        <span>HTML/CSS</span>
+        <div class="bar"><div class="fill" style="width: 95%"></div></div>
+      </div>
+      <div class="skill-bar">
+        <span>Vue</span>
+        <div class="bar"><div class="fill" style="width: 80%"></div></div>
+      </div>
+      <div class="skill-bar">
+        <span>Node.js</span>
+        <div class="bar"><div class="fill" style="width: 75%"></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="about-section" data-aos="fade-left">
+    <div class="about-content">
+      <div class="about-text">
+        <h2>About Me</h2>
+        <p>Hello! I love building creative and efficient web applications.I am a passionate Software Engineering student at Refactory Academy with hands-on experience in
+                JavaScript, Vue.js, Node.js, MongoDB, and Express. I recently completed a comprehensive JavaScript
+                course where I built real-world projects that strengthened my skills in full-stack development. I'm
+                enthusiastic about creating scalable, user-friendly applications and solving practical problems through
+                code.
+                <br>
+                I thrive in collaborative environments, enjoy learning new technologies, and take pride in my
+                problem-solving and communication skills. I am now seeking opportunities to contribute to impactful
+                software projects and continue growing as a developer.</p>
+      </div>
+      <img src="images/IMG-20250404-WA0092.jpg" alt="Charity Ojera full body" class="about-fullbody-pic" />
+    </div>
+  </section>
+
+  <section id="projects" data-aos="zoom-in">
+    <h2 class="section-title"><span class="section-label">My Work</span> Projects</h2>
+    <div class="projects-cards">
+      <div class="project-card">
+        <div class="project-icon"><i class="fas fa-seedling"></i></div>
+        <h3>Karibu Groceries Limited Produce Management System</h3>
+        <p>A robust system for managing produce inventory, sales, and analytics for KGL. Features real-time updates and user-friendly dashboards.</p>
+      </div>
+      <div class="project-card">
+        <div class="project-icon"><i class="fas fa-chart-line"></i></div>
+        <h3>E-Commerce Dashboard</h3>
+        <p>Modern dashboard for e-commerce analytics, order tracking, and customer management. Built with responsive design and interactive charts.</p>
+      </div>
+      <div class="project-card">
+        <div class="project-icon"><i class="fas fa-images"></i></div>
+        <h3>Responsive Gallery</h3>
+        <p>A visually engaging, mobile-friendly gallery for showcasing images and artwork, with smooth transitions and filtering options.</p>
+      </div>
+      <div class="project-card">
+        <div class="project-icon"><i class="fas fa-question-circle"></i></div>
+        <h3>Quiz Game</h3>
+        <p>A fun and interactive quiz game to test your knowledge on various topics. Try to get the highest score!</p>
+        <a href="https://charityfae.github.io/JS-project/" class="btn primary" target="_blank" rel="noopener">Play Quiz</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quiz Modal -->
+  <div id="quiz-modal" style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; background:rgba(34,34,34,0.95); z-index:9999; align-items:center; justify-content:center;">
+    <div style="background:#fff; color:#222; border-radius:18px; max-width:350px; width:90%; margin:auto; padding:2rem; box-shadow:0 8px 32px #23252655; position:relative;">
+      <button onclick="document.getElementById('quiz-modal').style.display='none'" style="position:absolute; top:1rem; right:1rem; background:none; border:none; font-size:1.5rem; color:#ff6f91; cursor:pointer;">&times;</button>
+      <h3 style="text-align:center; color:#ffb300;">Quiz Game</h3>
+      <div id="quiz-game">
+        <!-- Quiz content will be injected here -->
+      </div>
+    </div>
+  </div>
+
+  <section id="services" class="services-section" data-aos="fade-up">
+    <h2><span class="section-label">My Services</span> What Can I Do</h2>
+    <div class="services-cards">
+      <div class="service-card">
+        <div class="service-icon"><i class="fas fa-lightbulb"></i></div>
+        <h3>Creative Design</h3>
+        <p>Modern, eye-catching designs tailored to your brand and audience for maximum impact.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon"><i class="fas fa-flag"></i></div>
+        <h3>Branding</h3>
+        <p>Building strong, memorable brand identities that stand out in the digital world.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon"><i class="fas fa-desktop"></i></div>
+        <h3>User Interface</h3>
+        <p>Intuitive and beautiful interfaces that enhance user experience and engagement.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon"><i class="fas fa-briefcase"></i></div>
+        <h3>User Experience</h3>
+        <p>Crafting seamless user journeys for higher satisfaction and retention.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon"><i class="fas fa-code"></i></div>
+        <h3>Clean Code</h3>
+        <p>Writing maintainable, scalable, and efficient code for robust web applications.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon"><i class="fas fa-headset"></i></div>
+        <h3>Fast Support</h3>
+        <p>Quick response and reliable support to keep your projects running smoothly.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact-section">
+    <h2>Contact Me</h2>
+    <form id="contactForm">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <textarea name="message" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+    <p id="formStatus"></p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Charity Ojera. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+</body>
+</html>

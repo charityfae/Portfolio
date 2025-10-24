@@ -88,3 +88,50 @@ document.getElementById('theme-toggle').addEventListener('click', function() {
   // Optional: Change icon
   this.textContent = document.body.classList.contains('dark-mode') ? '☀️' : '🌙';
 });
+
+// Simple carousel for KGL project card
+(function(){
+  const track = document.querySelector('.kgl-carousel .carousel-track');
+  if (!track) return;
+
+  const slides = Array.from(track.querySelectorAll('img'));
+  const prev = document.querySelector('.kgl-carousel .carousel-btn.prev');
+  const next = document.querySelector('.kgl-carousel .carousel-btn.next');
+  const thumbs = Array.from(document.querySelectorAll('.kgl-carousel .carousel-thumbs img'));
+  let index = 0;
+
+  function update() {
+    track.style.transform = `translateX(-${index * 100}%)`;
+    thumbs.forEach((t,i)=> t.classList.toggle('active', i===index));
+  }
+
+  prev.addEventListener('click', ()=> {
+    index = (index - 1 + slides.length) % slides.length;
+    update();
+  });
+
+  next.addEventListener('click', ()=> {
+    index = (index + 1) % slides.length;
+    update();
+  });
+
+  thumbs.forEach(t => t.addEventListener('click', (e)=>{
+    index = Number(e.currentTarget.dataset.index) || 0;
+    update();
+  }));
+
+  // auto-play (optional) — comment out if not desired
+  let autoplay = setInterval(()=> {
+    index = (index + 1) % slides.length; update();
+  }, 4500);
+
+  // pause on hover
+  const carousel = document.querySelector('.kgl-carousel');
+  carousel.addEventListener('mouseenter', ()=> clearInterval(autoplay));
+  carousel.addEventListener('mouseleave', ()=> {
+    autoplay = setInterval(()=> { index = (index + 1) % slides.length; update(); }, 4500);
+  });
+
+  // init
+  update();
+})();

@@ -513,7 +513,6 @@ footer {
   border-radius: 8px;
   font-weight: bold;
   text-decoration: none;
-  transition: background 0.2s, color 0.2s;
 }
 .project-link:hover {
   background: #ffb300;
@@ -736,4 +735,142 @@ body.dark-mode .logo span {
 
 body.dark-mode .logo img {
   filter: brightness(1.5) drop-shadow(0 2px 8px #ffd60055);
+}
+
+/* --- Uniform Contact Button Styles --- */
+/* Base button appearance (keeps all .btn looking consistent) */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+  padding: .6rem 1rem;
+  border-radius: 12px;
+  font-weight: 700;
+  text-decoration: none;
+  cursor: pointer;
+  transition: transform .14s ease, box-shadow .14s ease, opacity .14s ease;
+  border: none;
+  box-shadow: 0 8px 30px rgba(16,24,40,0.06);
+}
+
+/* Primary (e.g. Download CV) */
+.btn.primary {
+  background: linear-gradient(90deg,#ffd600,#ffb300);
+  color: #111;
+  box-shadow: 0 10px 30px rgba(255,182,0,0.15);
+}
+
+/* Uniform contact style — applies to .btn.secondary, .contact-btn class and any link to #contact */
+.btn.secondary,
+.btn.contact-btn,
+a[href="#contact"] {
+  background: transparent;
+  color: #ffd600;
+  border: 2px solid rgba(255,214,0,0.95);
+  padding: .5rem 0.95rem;
+  border-radius: 12px;
+  background: rgba(255,214,0,0.06);
+  font-weight: 700;
+  text-align: center;
+}
+
+/* Hover / focus for contact buttons */
+.btn.secondary:hover,
+.btn.contact-btn:hover,
+a[href="#contact"]:hover {
+  transform: translateY(-4px);
+  background: linear-gradient(90deg, rgba(255,214,0,0.12), rgba(255,214,0,0.08));
+  box-shadow: 0 14px 34px rgba(255,182,0,0.12);
+}
+
+.btn:focus,
+a[href="#contact"]:focus {
+  outline: 3px solid rgba(255,214,0,0.18);
+  outline-offset: 3px;
+}
+
+/* Dark mode overrides to ensure visibility & contrast */
+body.dark-mode .btn.secondary,
+body.dark-mode .btn.contact-btn,
+body.dark-mode a[href="#contact"] {
+  background: rgba(255,214,0,0.12);
+  color: #111;
+  border-color: rgba(255,214,0,0.96);
+}
+
+/* Small screens: keep buttons readable and stacked nicely */
+@media (max-width: 600px) {
+  .btn { padding: .55rem .9rem; font-size: .98rem; }
+  .hero-actions { display: flex; gap: .6rem; flex-direction: column; align-items: stretch; }
+}
+
+/* Karibu (KGL) project carousel styles */
+.project-card.project-kgl { max-width: 420px; }
+.kgl-carousel {
+  position: relative;
+  margin: 0.8rem 0 1rem;
+  background: linear-gradient(180deg,#fff,#fff0);
+  border-radius: 12px;
+  padding: 0.6rem;
+  box-shadow: 0 6px 20px rgba(16,24,40,0.06);
+  overflow: visible;
+}
+.carousel-track {
+  display: flex;
+  transition: transform .35s ease;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 10px;
+}
+.carousel-track img {
+  width: 100%;
+  flex: 0 0 100%;
+  object-fit: cover;
+  border-radius: 8px;
+  display: block;
+}
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.55);
+  color: #fff;
+  border: none;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 1.25rem;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  z-index: 2;
+}
+.carousel-btn.prev { left: 8px; }
+.carousel-btn.next { right: 8px; }
+.carousel-thumbs {
+  display:flex;
+  gap:0.5rem;
+  margin-top:0.6rem;
+  justify-content:center;
+}
+.carousel-thumbs img {
+  width:64px;
+  height:38px;
+  object-fit:cover;
+  border-radius:6px;
+  cursor:pointer;
+  opacity:0.6;
+  border: 2px solid transparent;
+  transition: opacity .18s, transform .12s, border-color .12s;
+}
+.carousel-thumbs img.active {
+  opacity:1;
+  transform: translateY(-4px);
+  border-color: #ffd600;
+}
+
+/* Responsive */
+@media (max-width:800px){
+  .carousel-thumbs img { width:56px; height:34px; }
 }
